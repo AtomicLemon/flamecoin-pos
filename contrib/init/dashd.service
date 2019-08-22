@@ -1,0 +1,22 @@
+[Unit]
+Description=Flamecoin's distributed currency daemon
+After=network.target
+
+[Service]
+User=flamecoincore
+Group=flamecoincore
+
+Type=forking
+PIDFile=/var/lib/flamecoind/flamecoind.pid
+ExecStart=/usr/bin/flamecoind -daemon -pid=/var/lib/flamecoind/flamecoind.pid \
+-conf=/etc/flamecoincore/flamecoin.conf -datadir=/var/lib/flamecoind -disablewallet
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target
