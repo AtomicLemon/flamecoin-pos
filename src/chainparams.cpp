@@ -287,9 +287,9 @@ public:
         nDefaultPort = 9999;
         nPruneAfterHeight = 100000;
 
-        genesis = CreateGenesisBlock(1566545405, 1011387, 0x1e0ffff0, 1, 50 * COIN);
+        genesis = CreateGenesisBlock(1566552272, 1524255, 0x1e0ffff0, 1, 50 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("00000946fd891da46ffd85559a2fdcd52b206202b03eeb52939afc7e76fe228e"));
+        assert(consensus.hashGenesisBlock == uint256S("00000493da0913d1a903f3f0d546929ff91d4404fc0abe9cfb8a3c1e425c9035"));
         assert(genesis.hashMerkleRoot == uint256S("1803b65a08524bb0c6a22ea40d8a7697e37ed6035a716cb8681cd80037d586cf"));
 
 
@@ -338,11 +338,11 @@ public:
 
         checkpointData = (CCheckpointData) {
             boost::assign::map_list_of
-            (  0, uint256S("00000946fd891da46ffd85559a2fdcd52b206202b03eeb52939afc7e76fe228e"))
+            (  0, uint256S("00000493da0913d1a903f3f0d546929ff91d4404fc0abe9cfb8a3c1e425c9035"))
         };
 
         chainTxData = ChainTxData{
-            1566545405, // * UNIX timestamp of last known number of transactions (Block 1068571)
+            1566552272, // * UNIX timestamp of last known number of transactions (Block 1068571)
             0,   // * total number of transactions between genesis and that timestamp
                         //   (the tx=... number in the SetBestChain debug.log lines)
             0         // * estimated number of transactions per second after that timestamp
